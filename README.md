@@ -1,6 +1,6 @@
 # 📚 Book Recommendation System
 
-A machine learning-based book recommendation system that suggests similar books using collaborative filtering. The application analyzes user ratings to compute similarity scores and provides personalized recommendations through an interactive web interface.
+A machine learning-based book recommendation system that suggests similar books using collaborative filtering. The application analyzes user ratings to compute similarity scores and provides personalized recommendations through an interactive web interface built with Streamlit.
 
 ---
 
@@ -8,9 +8,10 @@ A machine learning-based book recommendation system that suggests similar books 
 
 * Recommend top 5 similar books
 * Displays book title, author, and cover image
-* Fast and interactive UI using Streamlit
-* Handles invalid or missing inputs
-* Easy to deploy on cloud platforms
+* Interactive UI using Streamlit
+* Handles missing/invalid input
+* Dynamic loading of large model files using Google Drive
+* Fast and lightweight deployment
 
 ---
 
@@ -27,7 +28,7 @@ A machine learning-based book recommendation system that suggests similar books 
 
 * Data preprocessing and cleaning
 * Creation of pivot table (user-book matrix)
-* Similarity score calculation
+* Similarity score calculation using cosine similarity
 * Recommendation based on nearest neighbors
 
 ---
@@ -43,7 +44,7 @@ streamlit run app.py
 
 ## 🌐 Live Demo
 
-(Add your Streamlit link here after deployment)
+https://bookrecommendersystem-ydd2xpsfhjasffhzwcmszd.streamlit.app
 
 ---
 
@@ -56,7 +57,6 @@ book-recommender/
 ├── requirements.txt
 ├── popular.pkl
 ├── pt.pkl
-├── books.pkl
 ├── similarity_score.pkl
 ├── notebook.ipynb
 └── README.md
@@ -66,15 +66,22 @@ book-recommender/
 
 ## 📌 Dataset
 
-Dataset used: Books Dataset (from Kaggle)
+Dataset used: Books Dataset (Kaggle)
+
+---
+
+## ⚠️ Note
+
+Large file `books.pkl` is not included in this repository due to GitHub size limitations.
+It is dynamically downloaded from Google Drive during app execution.
 
 ---
 
 ## 🎯 Future Improvements
 
 * Add search suggestions
-* Improve UI design
-* Add user login system
+* Improve UI design (card layout)
+* Add user authentication
 * Hybrid recommendation system
 
 ---
